@@ -1,0 +1,29 @@
+syntax = "proto3";
+option go_package="github/meteedev/microservices/grpc-ms-go/order";
+
+message CreateOrderRequest {
+  int32 user_id = 1;
+  repeated Item items = 2;
+  float total_price = 3;
+}
+
+message Item {
+  int32 name = 1;
+}
+
+message CreateOrderResponse {
+  int32 order_id = 1;
+}
+
+service Order {
+  rpc Create(CreateOrderRequest)
+      returns (CreateOrderResponse){}
+}
+
+
+// protoc -I ./proto \
+// --go_out ./golang \
+// --go_opt paths=source_relative \
+// --go-grpc_out ./golang \
+// --go-grpc_opt paths=source_relative \
+// ./proto/order.proto
