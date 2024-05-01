@@ -19,10 +19,15 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Display Go version
         run: go version
-      - name: Install dependencies
-        run: go mod download
-      - name: Run go vet (static analysis)
-        run: go vet ./...
+      - name: Install dependencies order
+        run: ./order/go mod download
+      - name: Install dependencies payment
+        run: ./payment/go mod download
+      - name: Run go vet (order static analysis)
+        run: ./order/go vet ./...
+      - name: Run go vet (payment static analysis)
+        run: ./payment/go vet ./...
+
 
 
   Unit-Test:
