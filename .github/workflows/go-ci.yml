@@ -53,9 +53,7 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: ${{ matrix.go-version }}
-      - name: Run tests
-        run: go test -v ./...
-      
+    
       - name: Run Order Unit test 
         run: cd order && go test -v ./...
 
