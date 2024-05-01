@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/meteedev/go-ms-grpc/order/internal/application/core/domain"
-	"github.com/meteedev/go-ms-grpc/order/internal/ports"
+	"github.com/meteedev/grpc-ms-go/order/internal/application/core/domain"
+	"github.com/meteedev/grpc-ms-go/order/internal/ports"
 )
 
 type Application struct {
