@@ -3,7 +3,7 @@ package grpc
 import (
 	"context"
 	"github.com/meteedev/grpc-ms-go/order/internal/application/core/domain"
-	"github.com/meteedev/grpc-ms-go/proto/go_proto"
+	grpc_order "github.com/meteedev/grpc-ms-go/proto/go_proto/order"
 )
 
 func (a Adapter) Create(ctx context.Context, request *grpc_order.CreateOrderRequest) (*grpc_order.CreateOrderResponse, error) {
