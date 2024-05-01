@@ -6,7 +6,7 @@ import (
 
 	"github.com/meteedev/grpc-ms-go/order/config"
 	"github.com/meteedev/grpc-ms-go/order/internal/ports"
-	grpc_order "github.com/meteedev/grpc-ms-go/proto/go_proto/order"
+	"github.com/meteedev/grpc-ms-go/order/proto/go_proto"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"

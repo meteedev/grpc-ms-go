@@ -3,10 +3,11 @@ package grpc
 import (
 	"context"
 	"github.com/meteedev/grpc-ms-go/order/internal/application/core/domain"
-	grpc_order "github.com/meteedev/grpc-ms-go/proto/go_proto/order"
+	"github.com/meteedev/grpc-ms-go/order/proto/go_proto"
 )
 
 func (a Adapter) Create(ctx context.Context, request *grpc_order.CreateOrderRequest) (*grpc_order.CreateOrderResponse, error) {
+	
 	var orderItems []domain.OrderItem
 	for _, orderItem := range request.OrderItems {
 		orderItems = append(orderItems, domain.OrderItem{

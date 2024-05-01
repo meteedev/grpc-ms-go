@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package="github/meteedev/meteedev/grpc-ms-go/grpc-payment";
+option go_package="github/meteedev/meteedev/grpc-ms-go/grpc_payment";
 
 message CreatePaymentRequest {
     int64 user_id = 1;

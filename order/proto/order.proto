@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package="github/meteedev/meteedev/grpc-ms-go/grpc-order";
+option go_package="github/meteedev/meteedev/grpc-ms-go/order/grpc_order";
 
 message CreateOrderRequest {
   int64 user_id = 1;
